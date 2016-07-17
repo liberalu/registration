@@ -1,0 +1,89 @@
+body {
+    background-color: #ebf4f4;
+    font-size: 12px;
+    color: #777777;
+}
+
+.form {
+    width:320px;
+    margin: 100px auto 0 auto;
+    padding: 53px 30px 30px;
+    background-color: #ffffff;
+    position: relative;
+
+}
+
+.form .title {
+    background-color: #01b3b3;
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px 9px 3px;
+    font-weight: 600;
+    top: -3px;
+    margin-bottom: 24px;
+    display: inline-block;
+    position: absolute;
+}
+
+.form label {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.form input {
+    border: 1px solid #ebf4f4;
+    background-color: #ebf4f4;
+    border-radius: 0px;
+    box-shadow: none;
+    height: 30px;
+    color: #777777;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.form .form-group {
+    margin-bottom: 16px;
+}
+
+.form button {
+    display: block;
+    width: 100%;
+    background-color: #01b3b3;
+    margin-top: 38px;
+    padding: 11px 0 13px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+}
+
+.form button:hover,
+.form button:focus,
+.form button:active,
+.form button:active,
+.form button:visited,
+.form button:active:focus
+{
+    color: #ffffff;
+    background-color: #01b3b3;
+    box-shadow: 0 4px #017e7e;
+    top: -2px;
+    border: none;
+}
+
+.form label.required:after {
+    content:"*";
+    margin-left: 3px;
+    color: #01b3b3;
+}
+
+.form .form-group ul, .form .form-group  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #a94442;
+}
+

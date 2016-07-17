@@ -1,11 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-{{ form_start(form) }}
-    <div class="title">Create account</div>
-    {{ form_row(form.username) }}
-    {{ form_row(form.plainPassword.first) }}
-    {{ form_row(form.plainPassword.second) }}
-    {{ form_row(form.save) }}
+{{ form_start(form, { 'attr': {'class': 'form', 'novalidate': 'novalidate'} }) }}
+    {% for flashMessage in app.session.flashbag.get('success') %}
+        <div class="alert alert-success" role="alert">{{ flashMessage }}</div>
+    {% endfor %}
+    <span class="title">Create an account</span>
+        <div class="form-group {% if not form.username.vars.valid %}has-error{% endif %}" >
+        {{ form_row(form.username, {'attr' : {'class' : 'form-control'}}) }}
+        </div>
+    <div class="form-group {% if not form.plainPassword.first.vars.valid %}has-error{% endif %}">
+        {{ form_row(form.plainPassword.first, {'attr' : {'class' : 'form-control'}}) }}
+    </div>
+    <div class="form-group  {% if not form.plainPassword.second.vars.valid %}has-error{% endif %}">
+        {{ form_row(form.plainPassword.second, {'attr' : {'class' : 'form-control'}}) }}
+    </div>
+    {{ form_row(form.save, {'attr' : {'class' : 'btn btn-default'}}) }}
 {{ form_end(form) }}
 {% endblock %}

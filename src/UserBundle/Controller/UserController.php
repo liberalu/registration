@@ -37,6 +37,8 @@ class UserController extends Controller
             $em->persist($user);
             $em->flush();
 
+            $this->get('session')->getFlashBag()->set('success', 'Registration is successfully');
+
             return $this->redirectToRoute('user_registartion');
         }
 
